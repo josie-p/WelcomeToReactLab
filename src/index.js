@@ -16,7 +16,7 @@ const Counter = () => {
                 Counter.js
             </div>
             <div id='counter'>
-                <h1>0</h1>
+                <h1>{count}</h1>
                 <button onClick={increment}>Increment</button>
             </div>
         </div>

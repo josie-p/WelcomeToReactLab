@@ -1,6 +1,27 @@
 // Your code here!
-import React from 'react';
+import React, { useState } from 'react';
 import ReactDOM from 'react-dom';
 
-ReactDOM.render(<h1>Hello World!</h1>, document.getElementById('app'));
+
+const Counter = () => {
+    const [count, setCount] = useState(0);
+
+    const increment = () => {
+        setCount(count + 1);
+    }
+
+    return (
+        <div id='container'>
+            <div id='navbar'>
+                Counter.js
+            </div>
+            <div id='counter'>
+                <h1>0</h1>
+                <button onClick={increment}>Increment</button>
+            </div>
+        </div>
+    )
+}
+
+ReactDOM.render(<Counter />, document.getElementById('app'));
 
